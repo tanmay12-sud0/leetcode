@@ -1,3 +1,4 @@
+[Discussion Post (created on 29/8/2021 at 21:55)](https://leetcode.com/problems/rotate-array/discuss/1493728/3-line-code-oror-easy-to-understand-oror-best-ever-oror-using-vector)  
 <h2>189. Rotate Array</h2><h3>Medium</h3><hr><div><p>Given an array, rotate the array to the right by <code>k</code> steps, where <code>k</code> is non-negative.</p>
 
 <p>&nbsp;</p>
