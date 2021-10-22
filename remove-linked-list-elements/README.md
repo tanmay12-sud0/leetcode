@@ -1,3 +1,4 @@
+[Discussion Post (created on 22/9/2021 at 20:52)](https://leetcode.com/problems/remove-linked-list-elements/discuss/1534995/dekho-dekhe-smj-aata-hai-kya)  
 <h2>203. Remove Linked List Elements</h2><h3>Easy</h3><hr><div><p>Given the <code>head</code> of a linked list and an integer <code>val</code>, remove all the nodes of the linked list that has <code>Node.val == val</code>, and return <em>the new head</em>.</p>
 
 <p>&nbsp;</p>
