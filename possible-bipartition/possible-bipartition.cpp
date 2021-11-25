@@ -42,9 +42,7 @@ public:
 	bool check_bipartite_graph(int node){
 		vector<int>visited(v,0);
 		int parent = -1;
-        // if(!l[node].front()){
-        //     return false;
-        // }
+       
         for(int i=0;i<v;i++){
              if(visited[i]==0 && bipartite_graph(i,visited,-1,1)==false){ 
 	                return false;
