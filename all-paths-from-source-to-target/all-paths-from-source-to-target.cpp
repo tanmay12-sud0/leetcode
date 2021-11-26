@@ -209,7 +209,7 @@ public:
     
     void dfss(int source, vector<bool>visited, int n, vector<vector<int>>&hash, vector<int>& old_hash){
 
-    	visited[source] = true;
+    	// visited[source] = true;
     	old_hash.push_back(source);
 
     	if(source == n-1){
@@ -239,12 +239,6 @@ public:
         vector<int>old_hash;
         g.dfss(0, visited, n, hash ,old_hash);
 
-        for(auto x : hash){
-        	for(auto y : x){
-        		cout << y << ", ";
-        	}
-        	cout << endl;
-        }
         return hash;
     }
 };
