@@ -2,9 +2,9 @@ class Solution {
 public:
     vector<vector<int>> kClosest(vector<vector<int>>& points, int k) {
         // unordered_map<float, int>hash;
-        multimap<float, int>pq;
+        multimap<int, int>pq;
         for(int i=0; i<points.size(); i++){
-            float value = (sqrt((points[i][0]*points[i][0]) + (points[i][1]*points[i][1])));
+            int value = (((points[i][0]*points[i][0]) + (points[i][1]*points[i][1])));
             pq.insert({value, i});
             // hash[value] = i;
         }
