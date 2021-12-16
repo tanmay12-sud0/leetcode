@@ -1,3 +1,4 @@
+[Discussion Post (created on 16/11/2021 at 9:16)](https://leetcode.com/problems/minimum-limit-of-balls-in-a-bag/discuss/1630878/binary_search-oror-easy-to-understand)  
 <h2>1760. Minimum Limit of Balls in a Bag</h2><h3>Medium</h3><hr><div><p>You are given an integer array <code>nums</code> where the <code>i<sup>th</sup></code> bag contains <code>nums[i]</code> balls. You are also given an integer <code>maxOperations</code>.</p>
 
 <p>You can perform the following operation at most <code>maxOperations</code> times:</p>
