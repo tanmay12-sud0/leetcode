@@ -1,23 +1,21 @@
 class Solution {
 public:
     vector<vector<int>> kClosest(vector<vector<int>>& points, int k) {
-        // unordered_map<float, int>hash;
-        multimap<int, int>pq;
-        for(int i=0; i<points.size(); i++){
-            int value = (((points[i][0]*points[i][0]) + (points[i][1]*points[i][1])));
-            pq.insert({value, i});
-            // hash[value] = i;
-        }
-        int count = 0;
-        vector<vector<int>>tan;
-        for(auto it = pq.begin(); it != pq.end(); it++){
-            tan.push_back(points[it->second]);
-            count++;
-            if(count == k){
-                break;
+        vector<vector<int>>hash;
+        int n = points.size();
+        priority_queue<vector<int>>pq;
+        for(int i=0; i<n; i++){
+            int x = (points[i][0])*(points[i][0]) + (points[i][1])*(points[i][1]);
+            pq.push({x, points[i][0], points[i][1]});
+            if(pq.size() > k){
+                pq.pop();
             }
         }
-        // sort(tan.begin(), tan.end());
-        return tan;
+        while(!pq.empty()){
+            vector<int>umap = pq.top();
+            pq.pop();
+            hash.push_back({umap[1], umap[2]});
+        }
+        return hash;
     }
 };
