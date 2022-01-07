@@ -27,10 +27,11 @@ public:
         int len = hash.size();
         int idx = rand()%len;
         auto it = hash.begin();
-        for (int i = 0; i < idx; i++)
-        {
-            it++;
-        }
+        advance(it, idx);
+        // for (int i = 0; i < idx; i++)
+        // {
+        //     it++;
+        // }
         return *it;
     }
 };
