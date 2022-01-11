@@ -45,7 +45,7 @@ public:
         }
         cout << num << endl;
         int count = 0;
-        return minSteps(tan, num);
+        // return minSteps(tan, num);
         for(int i=0; i<n; i++){
             if(tan[i] != num[i]){
                 int j = i;
