@@ -23,9 +23,6 @@ public:
                 hash[changed[i]]++;
             }
         }
-        for(auto x : umap){
-            cout << x << ", ";
-        }
         if(umap.size() == changed.size()/2){
             return umap;
         }
