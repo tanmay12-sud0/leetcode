@@ -15,8 +15,7 @@ public:
         else
             return dp[n][m] = max(0 + maxLen(s1, s2, n - 0, m - 1), 0 + maxLen(s1, s2, n - 1, m - 0));
     }
-    
-    
+
     int longestPalindromeSubseq(string s) {
         memset(dp, -1, sizeof(dp));
         string p = s;
