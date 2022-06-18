@@ -1,34 +1,29 @@
 
 class Solution {
 public:
+    class Pairs{
+        public:
+            int hei;
+            int dia;
+    };
     
-    int height(TreeNode* root){
-	if(root == NULL){
-		return 0;
-	}
-	int h1 = height(root->left);
-	int h2 = height(root->right);
-	return max(h1, h2) + 1;
-}
-    
-    
-    
-    int diameter(TreeNode* root){
-	if(root == NULL){
-		return 0;
-	}
-	int h1 = height(root->left);
-	int h2 = height(root->right);
-	int op1 = h1+h2;
-	int op2 = diameter(root->left);
-	int op3 = diameter(root->right);
-	return max(op1, max(op2, op3));
-}
-
-    
-    
+    Pairs checkKro(TreeNode* root){
+        Pairs pp;
+        if(root == NULL){
+            pp.hei = 0;
+            pp.dia = 0;
+            return pp;
+        }
+        
+        Pairs left = checkKro(root->left);
+        Pairs right = checkKro(root->right);
+        pp.hei = max(left.hei, right.hei) + 1;
+        pp.dia = max(left.hei+right.hei, max(left.dia, right.dia));
+        return pp;
+    }
     
     int diameterOfBinaryTree(TreeNode* root) {
-        return diameter(root);
+        Pairs pp = checkKro(root);
+        return pp.dia;
     }
 };
