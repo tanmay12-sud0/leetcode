@@ -113,14 +113,14 @@ class Solution {
             return 0;
         }
         if(root->left == NULL and root->right == NULL){
-            int a = root->data;
+            int temp = root->data;
             root->data = 0;
-            return a;
+            return temp;
         }
         int left = solve(root->left);
         int right = solve(root->right);
         int temp = root->data;
-        root->data = left + right;
+        root->data = (left + right);
         return root->data + temp;
     }
     
