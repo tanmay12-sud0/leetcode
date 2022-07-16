@@ -1,33 +1,23 @@
-/**
- * Definition for a binary tree node.
- * struct TreeNode {
- *     int val;
- *     TreeNode *left;
- *     TreeNode *right;
- *     TreeNode() : val(0), left(nullptr), right(nullptr) {}
- *     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
- *     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
- * };
- */
+
 class Solution {
 public:
     vector<string>hash;
-    
     void checkNode(TreeNode* root, string s){
-        if(root==NULL){
+        if(root == NULL){
             return;
         }
-        if(root->left==NULL and root->right==NULL){
+        if(root->left == NULL and root->right == NULL){
             s += to_string(root->val);
             hash.push_back(s);
-           
+            s.clear();
+            return;
         }
         
-        checkNode(root->left, s+to_string(root->val)+"->");
-        checkNode(root->right, s+to_string(root->val)+"->");
+        s += to_string(root->val);
+        s += "->";
+        checkNode(root->left, s);
+        checkNode(root->right, s);
         s.pop_back();
-        // s.pop_back();
-        // s.pop_back();
         return;
         
     }
