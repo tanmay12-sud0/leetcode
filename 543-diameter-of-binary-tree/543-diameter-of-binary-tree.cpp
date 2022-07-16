@@ -1,29 +1,31 @@
 
 class Solution {
 public:
-    class Pairs{
+    
+    class pairs{
         public:
-            int hei;
-            int dia;
+            int height = 0;
+            int diameter=0;
     };
     
-    Pairs checkKro(TreeNode* root){
-        Pairs pp;
+    pairs check(TreeNode* root){
+        pairs pp;
+        
         if(root == NULL){
-            pp.hei = 0;
-            pp.dia = 0;
+            pp.height = 0;
+            pp.diameter = 0;
             return pp;
         }
         
-        Pairs left = checkKro(root->left);
-        Pairs right = checkKro(root->right);
-        pp.hei = max(left.hei, right.hei) + 1;
-        pp.dia = max(left.hei+right.hei, max(left.dia, right.dia));
+        pairs left = check(root->left);
+        pairs right = check(root->right);
+        pp.height = max(left.height, right.height)+1;
+        pp.diameter = max(left.height+right.height, max(left.diameter, right.diameter));
         return pp;
     }
     
     int diameterOfBinaryTree(TreeNode* root) {
-        Pairs pp = checkKro(root);
-        return pp.dia;
+        pairs pp = check(root);
+        return pp.diameter;
     }
 };
