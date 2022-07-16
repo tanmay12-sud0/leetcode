@@ -6,16 +6,13 @@ public:
 	    if(root == NULL){
             return;
         }
-        
         if(level > maxlevel){
-            hash.push_back(root->val);
             maxlevel = level;
+            hash.push_back(root->val);
         }
-        
         rightView(root->right, level+1, maxlevel, hash);
         rightView(root->left, level+1, maxlevel, hash);
         return;
-        
     }
     
     
