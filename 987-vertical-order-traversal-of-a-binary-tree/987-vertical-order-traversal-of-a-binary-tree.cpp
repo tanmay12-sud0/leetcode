@@ -18,7 +18,6 @@ public:
         
         return a.second > b.second;
     }
-
     vector<vector<int>> verticalTraversal(TreeNode* root) {
 
         if(root == NULL)
