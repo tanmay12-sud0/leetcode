@@ -24,18 +24,18 @@ public:
 
 	bool bipartite_graph(int node, vector<int>&visited, int parent, int color){
 		visited[node] = color;
-		
-		for(auto nbr : l[node]){
-			if(!visited[nbr]){
-				bool tanmay = bipartite_graph(nbr, visited, node, 3-color);
-				if(!tanmay){
-					return false;
-				}
-			}else if(nbr != parent && color == visited[nbr]){
-				return false;
-			}
-		}
-		return true;
+        
+        for(auto nbr : l[node]){
+            if(!visited[nbr]){
+                bool tan = bipartite_graph(nbr, visited, node, 3-color);
+                if(!tan){
+                    return false; 
+                }
+            }else if(node != parent and color == visited[nbr]){
+                return false;
+            }
+        }
+        return true;
 	}
 
 
