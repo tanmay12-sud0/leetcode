@@ -43,7 +43,6 @@ public:
                 }
                 max_so_far = max(max_so_far, dist[i][j]);
             }
-                cout << endl;
         }   
        return max_so_far/10; 
     }
