@@ -2,11 +2,10 @@ class MyHashMap {
 public:
     
     int hash[1000005] = {0};
-    
-    MyHashMap() {
+    MyHashMap(){
        for(int i=0; i<1000005; i++){
-        hash[i] = -1;
-    } 
+            hash[i] = -1;
+        } 
     }
     
     void put(int key, int value) {
