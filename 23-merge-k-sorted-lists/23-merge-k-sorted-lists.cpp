@@ -14,7 +14,6 @@ public:
         while(!pq.empty()){
             pair<int, ListNode*>pp = pq.top();
             pq.pop();
-            // ListNode* x = new ListNode(pp.first);
             temp->next = pp.second;
             temp = pp.second;
             if(pp.second->next != NULL){
