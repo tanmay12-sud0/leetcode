@@ -1,7 +1,6 @@
 bool compare(int a, int b){
     return abs(a)< abs(b);
 }
-
 class Solution {
 public:
     vector<int> sortedSquares(vector<int>& nums) {
