@@ -11,8 +11,7 @@ public:
         int digit = digits[i]-'0';
         for(int k=0; ss[digit][k]!='\0'; k++){
             out[j] = ss[digit][k];
-            findRecursion(digits, out, i+1, j+1);
-            
+            findRecursion(digits, out, i+1, j+1); 
         }
     }
     
