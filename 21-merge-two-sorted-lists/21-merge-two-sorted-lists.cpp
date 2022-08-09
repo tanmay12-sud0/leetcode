@@ -6,17 +6,16 @@ public:
         ListNode* temp = dummy;
         ListNode* p = l1;
         ListNode* q = l2;
-        while(p != NULL and q != NULL){
+        while(p and q){
             if(p->val <= q->val){
                 temp->next = p;
-                temp = temp->next;
+                temp = p;
                 p = p->next;
             }else{
                 temp->next = q;
-                temp = temp->next;
+                temp = q;
                 q = q->next;
             }
-            
         }
         if(p){
             temp->next = p;
